@@ -40,6 +40,18 @@
       "created_at": "2026-10-26T00:24:07.736Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "58bb5b14-d470-4ea3-b4ef-3a30dd9cfcca",
+      "role": "agent",
+      "content": "To connect and run everything **fully locally on your computer**, here are the common ways to do it depending on your workflow:\n\n---\n\n### Option 1: Run Antigravity CLI directly on your computer with your repository\n\nIf you want the agent and all chats to run locally on your machine rather than in this cloud container:\n\n1. **Install the CLI on your local computer**:\n   ```bash\n   curl -fsSL https://antigravity.google/install.sh | bash\n   ```\n   *(Or download the Antigravity Desktop app from [antigravity.google](https://antigravity.google)).*\n\n2. **Clone your GitHub repository**:\n   ```bash\n   git clone https://github.com/the7soberdev/first-project.git\n   cd first-project\n   ```\n\n3. **Launch the CLI**:\n   ```bash\n   agy\n   ```\n   Now, every conversation, file modification, and transcript runs directly on your machine and saves to your local `~/.gemini/antigravity-cli/` directory.\n\n---\n\n### Option 2: Connect your local machine via Remote Control\n\nIf you want the web or desktop interface to execute commands and manage chats directly on your local computer:\n\n1. On your local terminal, start the remote daemon:\n   ```bash\n   agy remote-control start --name \"my-local-machine\"\n   ```\n2. Check that it is running:\n   ```bash\n   agy remote-control status\n   ```\n3. In the Antigravity app interface, select your local machine as the active execution target.\n\n---\n\n### Option 3: Export & sync current cloud chats into your GitHub repository\n\nIf you want to access the chats from this current cloud workspace on your computer:\n\n* I can export the full transcript of this session into a file (e.g. `docs/chat-history.md` or `.chats/transcript.jsonl`) inside your repository.\n* Since changes to this repository are automatically committed and pushed to `the7soberdev/first-project`, you can simply run `git pull` on your computer to view them locally.\n\n---\n\n### Option 4: Fully offline / Local LLM (Ollama / LocalAI)\n\nIf by \"fully locally\" you mean running without sending data to external APIs:\n* You can configure the CLI in `~/.gemini/antigravity-cli/settings.json` to point model requests to a local endpoint (such as an Ollama instance running at `http://localhost:11434/v1`).\n\n---\n\nWould you like me to **export the chat history directly into your repository** so you can pull it to your machine, or do you need help setting up `agy` locally?",
+      "status": "completed",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "62176b29-fd93-4536-b852-f1fe5d2cfeb7",
+      "created_at": "2026-10-26T00:24:50.113Z",
+      "sender": "macOS",
+      "is_cancelled": false
     }
   ]
 }
